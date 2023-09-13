@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+
+    <script>
+
+// singal line Validation
+
+//numbers Validations
+
+        function a(){
+            let y=parseInt(document.getElementById("numb").value);
+            let x = document.forms["ok"]["name"].value;
+            let text;
+            if(isNaN(y) ||  y< 1 || y > 10){
+                text = "Input not Valid";
+            } else if(x == ""){
+                alert("Name Must Be Enter");
+            } else{
+                text="Input Valid";
+            }
+            document.getElementById("demo").innerHTML=text;
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>Form Validation</h1>
+    <form name="myForm" onsubmit="return ValidationForm()" method="post">
+        <label>Name :</label>
+        <input type="text" name="fname">
+        <input type="submit" value="submit">
+    </form><br><hr><br>
+
+<form name="ok" onsubmit="return a()" method="post">
+    <h2>Form Validation in JavaScript</h2>
+    <p>input Number Between 1 and 10 :</p>
+    <input id="numb" name="name">
+    <button type="button" onclick="a()">Submit</button>
+    <p id="demo"></p>
+</form>
+</body>
+
+</html>

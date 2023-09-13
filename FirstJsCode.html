@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Js Code</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        table{
+            padding: 10px;
+            margin-left: 25%;
+            margin-right: 25%;
+            margin-bottom: 25%;
+            border: 2px solid;
+            margin-top: 30%;
+            border-radius: 10px;
+        }
+        tr td{
+            padding: 3px;
+        }
+        input{
+            outline: none;
+            width: 150px;
+            height: 30px;
+        }
+        button{
+            background-color: cornflowerblue;
+            color: aliceblue;
+            outline: none;
+            width: 100px;
+            height: 33px;
+            font-size: 20px;
+        }
+        button:hover{
+            background-color: aquamarine;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <table>
+        <tr>
+            <td><p>First Number</p></td>
+            <td><input id="txtFirstNumber"></td>
+        </tr>
+        <tr>
+            <td><p>Second Number</p></td>
+            <td><input id="txtSecondNumber"></td>
+        </tr>
+        <tr>
+            <td><button onclick="add()">+</button></td>
+            <td><button onclick="sub()">-</button></td>
+            <td><button onclick="mul()">*</button></td>
+            <td><button onclick="div()">/</button></td>
+        </tr>
+        <tr>
+            <td><p>Answer</p></td>
+            <td><input id="txtAnswer"></td>
+        </tr>
+    </table>
+</div>
+   <script>
+
+function add(){
+var num1, num2, add;
+       num1=parseInt(document.getElementById("txtFirstNumber").value);
+       num2=parseInt(document.getElementById("txtSecondNumber").value);
+       add=num1+num2;
+       document.getElementById("txtAnswer").value=add;
+
+}
+function sub(){
+    var num1, num2, sub;
+       num1=parseInt(document.getElementById("txtFirstNumber").value);
+       num2=parseInt(document.getElementById("txtSecondNumber").value);
+       sub=num1-num2;
+       document.getElementById("txtAnswer").value=sub;
+}
+function mul(){
+    var num1, num2, mul;
+       num1=parseInt(document.getElementById("txtFirstNumber").value);
+       num2=parseInt(document.getElementById("txtSecondNumber").value);
+       mul=num1*num2;
+       document.getElementById("txtAnswer").value=mul;
+}
+function div(){
+    var num1, num2, div;
+       num1=parseInt(document.getElementById("txtFirstNumber").value);
+       num2=parseInt(document.getElementById("txtSecondNumber").value);
+       div=num1-num2;
+       document.getElementById("txtAnswer").value=div;
+}
+   </script>
+</body>
+</html>

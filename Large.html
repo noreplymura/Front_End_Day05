@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sumDigit</title>
+    <script>
+        function sumDigit(){
+        var num=parseInt(document.getElementById("click").value);
+        sd=0;
+        while(num>0){
+            sd+=num%10;
+            num=Math.floor(num/10);
+        }
+        document.getElementById("txtAns").value=sd;
+        }
+
+        function Largest(){
+        var num=parseInt(document.getElementById("click").value);
+        var res=0;
+        var temp=0;
+        while(num>=0){
+            temp=num%10;
+            if(res<temp){res=temp;}
+            num=Math.floor(num/10);
+            if(num<=0){break;}
+        }
+        document.getElementById("txtAns").value=res;
+        }
+
+        function Smallest(){
+        var num=parseInt(document.getElementById("click").value);
+        var res=9;
+        var temp=0;
+        while(num>=0){
+            temp=num%10;
+            if(res>temp){res=temp;}
+            num=Math.floor(num/10);
+            if(num<=0){break;}
+        }
+        document.getElementById("txtAns").value=res;
+        }
+
+        function ReverseofDigit(){
+        var num=parseInt(document.getElementById("click").value);
+        var res=0;
+        var temp=0;
+        while(num>0){
+            temp=num%10;
+            res=(res*10)+(temp);
+            num=Math.floor(num/10);
+        }
+        document.getElementById("txtAns").value=res;
+        }
+    </script>
+</head>
+<body>
+    <label>Enter A Number :</label>
+    <input type="text" id="click"><br><br>
+    <button onclick="sumDigit()">Sum of Digit</button>
+    <button onclick="Largest()">Largest</button>
+    <button onclick="Smallest()">Smallest</button>
+    <button onclick="ReverseofDigit()">ReverseofDigit</button><br><br>
+    <label>Sum Number :</label>
+    <input id="txtAns">
+</body>
+</html>
